@@ -61,7 +61,7 @@ public class Romain {
         System.out.println("Invariant vérifié : " + brutus.isInvariantVerified());
         
         System.out.println("\n force negative");
-        Romain minus = new Romain("Minus", -6);
+        Romain minus = new Romain("Minus", 6);
         System.out.println("Assertion vérifier");
     }
 }
