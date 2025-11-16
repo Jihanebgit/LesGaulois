@@ -25,15 +25,15 @@ public class TestGaulois {
 		
 		
 
-		//asterix.parler("Bonjour Obélix.");
-		 //obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
-		//asterix.parler("Oui très bonne idée.");
-		//System.out.println("Dans la forêt " + asterix.getNom() + " et " + obelix.getNom()
-		//		+ " tombent nez à nez sur le romain " + minus.getNom() + ".");
+		asterix.parler("Bonjour Obélix.");
+		obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
+		asterix.parler("Oui très bonne idée.");
+		System.out.println("Dans la forêt " + asterix.getNom() + " et " + obelix.getNom()
+				+ " tombent nez à nez sur le romain " + minus.getNom() + ".");
 		
-		//for (int i=0;i<3;i++) {
-		//	asterix.frapper(minus);
-		//}
+		for (int i=0;i<3;i++) {
+			asterix.frapper(minus);
+		}
 	
 	}
 

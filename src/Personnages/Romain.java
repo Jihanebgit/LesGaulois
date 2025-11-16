@@ -7,7 +7,7 @@ public class Romain {
     public Romain(String nom, int force) {
         this.nom = nom;
         this.force = force;
-        assert isInvariantVerified() : "Erreru Invariant ";
+        assert isInvariantVerified() : "Erreur Invariant ";
     }
 
     public String getNom() {
@@ -27,13 +27,16 @@ public class Romain {
     }
     
     public void recevoirCoup(int forceCoup) {
-        force -= forceCoup;
+    	assert forceCoup>=0 : "la force du coup reçu est positive";
+        int forceInit=force;
+    	force -= forceCoup;
         if (force > 0) {
             parler("Aïe");
         } else {
             parler("J'abandonne !");
         }
-        assert isInvariantVerified() : "Erreur Invariant ";
+        assert isInvariantVerified() : "Erreur Invariant neg ";
+        assert force<forceInit : "la force d'un Romain a diminué";
     }
     
     private boolean isInvariantVerified() {
@@ -61,7 +64,13 @@ public class Romain {
         System.out.println("Invariant vérifié : " + brutus.isInvariantVerified());
         
         System.out.println("\n force negative");
-        Romain minus = new Romain("Minus", 6);
+        Romain minus = new Romain("Minus",6);
         System.out.println("Assertion vérifier");
+        
+        System.out.println("\n force diminue");
+        Romain minus2 = new Romain("Minus2", 6);
+        minus2.recevoirCoup(1);
+        System.out.println("Assertion vérifier");
+        
     }
 }
